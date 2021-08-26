@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+    <h1 id="logo">
+        <img src="images/logo.png" alt="logo" /> Welcome at the Agency Cinnamon</a>
+    </h1>
+
+</header>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="social.css">
+    <script src="form.js"></script>
+    <style>
+        * {
+            box-sizing: border-box
+        }
+        /* Set height of body and the document to 100% */
+        
+        body,
+        html {
+            background-color: rgb(54, 50, 50);
+            height: 107%;
+            margin-top: 1cm;
+            margin-right: 1cm;
+            margin-bottom: 0cm;
+            margin-left: 1cm;
+            font-family: Arial;
+        }
+        /* Style tab links */
+        
+        header {
+            height: 4cm;
+            background-image: url("images/gift.jpeg");
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: rgb(15, 14, 10);
+        }
+        
+        .header img {
+            float: left;
+        }
+        
+        .header h1 {
+            position: relative;
+            top: 18px;
+            left: 10px;
+        }
+        
+        .tablink {
+            background-color: #555;
+            color: white;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 17px;
+            width: 25%;
+        }
+        
+        .tablink:hover {
+            background-color: #777;
+        }
+        /* Style the tab content (and add height:100% for full page content) */
+        
+        .tabcontent {
+            color: white;
+            display: none;
+            padding: 100px 20px;
+            height: 100%;
+        }
+        
+        #Home {
+            background-image: url("images/presents.jpeg");
+        }
+        
+        #News {
+            background-image: url("images/news.jpeg");
+        }
+        
+        #Contact {
+            background-image: url("images/bridge.jpeg");
+        }
+        
+        #About {
+            background-image: url("images/dream.jpeg");
+        }
+        
+        #pdoboz {
+            height: 16cm;
+            width: 10cm;
+            background-color: black;
+            opacity: 0.85;
+            padding: 1cm;
+            display: block;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="tablink" onclick="openPage('Home', this, 'cyan')" id="defaultOpen">Home</button>
+    <button class="tablink" onclick="openPage('News', this, 'cyan')">News</button>
+    <button class="tablink" onclick="openPage('Contact', this, 'cyan')">Contact</button>
+    <button class="tablink" onclick="openPage('About', this, 'cyan')">About</button>
+    <div id="tabs" class="content"></div>
+    <div id="Home" class="tabcontent">
+        <h4>Single Ladies! Find your friends or your soulmates for free with Cinnamon!</h4>
+
+        <img src="images/0013.jpeg">
+        <img src="images/0014.jpeg">
+        <img src="images/0015.jpeg">
+        <img src="images/0016.jpeg">
+        <img src="images/0017.jpeg">
+        <img src="images/0018.jpeg">
+        <img src="images/0019.jpeg">
+        <img src="images/0020.jpeg">
+        <img src="images/0021.jpeg">
+        <img src="images/0022.jpeg">
+        <img src="images/0023.jpeg">
+        <img src="images/0024.jpeg">
+    </div>
+
+    <div id="News" class="tabcontent">
+        <h1>Soon...</h1>
+
+    </div>
+    <div id="Contact" class="tabcontent">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 " id="form_container">
+                    <h2>Contact Us</h2>
+                    <p> Please send your message below. We will get back to you at the earliest! </p>
+                    <form action="handler.php" method="post" id="form">
+                        <div class="row">
+                            <div class="col-sm-12 form-group">
+                                <label for="message"> Message:</label>
+                                <textarea class="form-control" type="textarea" id="message" name="message" maxlength="6000" rows="7"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 form-group">
+                                <label for="name"> Your Name:</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <label for="email"> Email:</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 form-group">
+                                <button type="submit" class="btn btn-lg btn-default pull-right">Send &rarr;</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="success_message" style="width:100%; height:100%; display:none; ">
+                        <h3>Sent your message successfully!</h3>
+                    </div>
+                    <div id="error_message" style="width:100%; height:100%; display:none; ">
+                        <h3>Error</h3> Sorry there was an error sending your form. </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="About" class="tabcontent">
+        <div id="pdoboz">
+            <h4>Welcome on our page</h4>
+            <p>We are a dating agency in Hungary. Our primary goal is to make Singles Hungarian girls find their friends or their soulmates anywhere in the world. With our help you can chat, email, or talk to your native English speaker. We are about to
+                bring people closer together, whether it is a friendly conversation or a more serious relationship. Register for free and get bonuses and gifts.
+                <br /> Join an international communicating platform. You can chat with 20 millios users all over the world.<br /> - Make friends and find your soulmates<br /> - Learn and practice your foreign languages
+                <br /> - Enjoy a vaste of range of services<br /> - Participate in contests and interesting services<br /> - Communicate with verified members<br /> - Get protection from the leading international service<br /> - Receive romantic presents
+                from men<br /> - Video verifacation<br /> If you are interested and would like to get some information, don't hesitate to contact us!" both in Facebook and on the website!<br />
+
+                <p>
+                    Do you speak english at least on beginner level? We are waiting for you to join.
+                </p>
+
+            </p>
+        </div>
+        <div id="social">
+            <h4>Follow us!</h4>
+            <a href="https://www.facebook.com/Cinnamon-Agency-Társkeresés-az-egész-világon-424314748104610/?modal=admin_todo_tour" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/CinnamonAgency" class="fa fa-twitter"></a>
+
+
+
+        </div>
+        <script>
+            function openPage(pageName, elmnt, color) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablink");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].style.backgroundColor = "";
+                }
+                document.getElementById(pageName).style.display = "block";
+                elmnt.style.backgroundColor = color;
+
+            }
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+        </script>
+
+</body>
